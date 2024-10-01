@@ -33,6 +33,10 @@ thead {
   font-weight: 700;
 }
 
+.description {
+  font-size: 80%;
+}
+
 table {
   border-collapse: collapse;
 }
