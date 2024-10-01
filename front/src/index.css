@@ -15,7 +15,8 @@ input::-webkit-inner-spin-button {
 }
 
 .container {
-  max-width: 750px;
+  max-width: 850px;
+  text-align: justify;
   margin: 0 auto;
 }
 
@@ -116,7 +117,7 @@ table {
 }
 
 .custom-label {
-  color: #44a1df;
+  /* color: #44a1df; */
 }
 
 .red {

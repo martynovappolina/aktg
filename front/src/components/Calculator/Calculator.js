@@ -26,7 +26,6 @@ const Calculator = ({fields, title, url, onNeedResult, calculateOnChageField=fal
 
     const calculate = () => {
         const body = {}
-        console.log('asdasd')
 
         fields.reduce((acc, curr) => {
             let val = state[curr.val] === '' ? curr.checkbox? curr.defaultValue: 0: state[curr.val] 
