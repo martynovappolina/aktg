@@ -15,7 +15,7 @@ services:
       context: ./front
       dockerfile: Dockerfile  
     volumes:  
-      - v:/app/build  ахах
+      - v:/app/build
     depends_on:  
       - back  
 
