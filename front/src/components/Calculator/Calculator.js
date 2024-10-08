@@ -14,11 +14,11 @@ const Calculator = ({fields, title, url, onNeedResult, calculateOnChageField=fal
         const initialState = {};
         
         fields.reduce((acc, curr) => {
-            acc[curr.val] = curr.defaultValue !== null? curr.defaultValue: '';
-            //acc[`${curr.val}Error`] = false
+            debugger
+            acc[curr.val] = curr.defaultValue ? curr.defaultValue: '';
+            acc[`${curr.val}Error`] = false
             return acc;
         }, initialState);
-
         setResult()
         setState(initialState)
         setErrorState({})
