@@ -36,10 +36,10 @@ const Calculator = ({fields, title, url, onNeedResult, calculateOnChageField=fal
         let tempErrorState = {};
         let isError = false
         fields.map(f => {
-            tempErrorState[`${f.val}Error`] = state[`${f.val}`] === ''
+            tempErrorState[`${f.val}Error`] = state[`${f.val}`] === undefined 
             isError = isError || tempErrorState[`${f.val}Error`]
         })
-
+        
         setErrorState(tempErrorState);
 
         if (isError && !calculateOnChageField) return
@@ -100,6 +100,15 @@ const Calculator = ({fields, title, url, onNeedResult, calculateOnChageField=fal
                         <InputContainer 
                         label={field.label}
                         unit={field.unit}
+                        error={errorState && errorState[`${field.val}Error`]}
+                        setError={()=>{
+                            const initialState = errorState;
+                            initialState[`${field.val}Error`] = false
+                            setErrorState(prevState => ({
+                                ...prevState,
+                                ...initialState
+                            }));
+                        }}
                         value={state && state[field.val]}
                         setValue={v => {setState({...state, [field.val]: v})}}
                         result={calculateOnChageField? undefined: result}
