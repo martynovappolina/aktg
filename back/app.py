@@ -39,7 +39,7 @@ def predict():
 
     res = {'data': '', 'status': 200}
 
-    perc = round(float(r[1][0]))
+    perc = round(float(r[1][0])*100)
     if (perc >= 0 and perc < 30):
         res['data'] = f'Вероятность АКТГ-эктопированного синдрома: {perc}% Полученный результат указывает на низкую вероятность АКТГ-эктопированного синдрома.'
     if (perc >= 30 and perc < 50):
