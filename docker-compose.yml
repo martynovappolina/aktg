@@ -3,7 +3,7 @@ services:
     image: nginx:alpine  
     volumes:  
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf  
-      - volume1:/usr/share/nginx/html  
+      - v:/usr/share/nginx/html  
     ports:  
       - '80:80'  
     restart: always  
@@ -15,7 +15,7 @@ services:
       context: ./front
       dockerfile: Dockerfile  
     volumes:  
-      - volume1:/app/build  
+      - v:/app/build  ахах
     depends_on:  
       - back  
 
@@ -27,4 +27,4 @@ services:
       - "5000:5000"  
 
 volumes:  
-  volume1:  
+  v:  
