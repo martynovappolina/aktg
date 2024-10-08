@@ -20,7 +20,7 @@ def predict():
     potassium = request.form['potassium']
     largest = request.form['largest']
 
-    path_to_model = './final_fit.RDa'
+    path_to_model = './new1_final_fit.rda'
 
 
     r = robjects.r('''
