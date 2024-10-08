@@ -14,7 +14,6 @@ const Calculator = ({fields, title, url, onNeedResult, calculateOnChageField=fal
         const initialState = {};
         
         fields.reduce((acc, curr) => {
-            debugger
             acc[curr.val] = curr.defaultValue ? curr.defaultValue: '';
             acc[`${curr.val}Error`] = false
             return acc;
@@ -36,7 +35,7 @@ const Calculator = ({fields, title, url, onNeedResult, calculateOnChageField=fal
         let tempErrorState = {};
         let isError = false
         fields.map(f => {
-            tempErrorState[`${f.val}Error`] = state[`${f.val}`] === undefined 
+            tempErrorState[`${f.val}Error`] = state[`${f.val}`] === '' 
             isError = isError || tempErrorState[`${f.val}Error`]
         })
         
