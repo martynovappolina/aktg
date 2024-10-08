@@ -54,7 +54,7 @@ const Calculator = ({fields, title, url, onNeedResult, calculateOnChageField=fal
             })
             .then(resp => resp.json())
             .then(resp => 
-                setResult(resp.data.split('/n'))
+                setResult(resp.data.split('\n'))
             )    
         }
     }
@@ -135,8 +135,14 @@ const Calculator = ({fields, title, url, onNeedResult, calculateOnChageField=fal
                 </div>
             </>}
             {
-                result && <>{result.map(res => <div style={{marginTop: '10px'}}>{res}</div>)}</>
+                result && <>
+                    <b style={{marginTop: '20px'}}>{result[0]}</b>
+                    <div>{result[1]}</div>
+                </>
             }
+            {/* {
+                result && <>{result.map(res => <div style={{marginTop: '10px'}}>{res}</div>)}</>
+            } */}
         </div>
     )
 }
