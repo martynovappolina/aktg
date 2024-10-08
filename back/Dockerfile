@@ -8,5 +8,6 @@ RUN R -e "install.packages('gbm', repos='http://cran.r-project.org')"
 ENV R_HOME /usr/lib/R 
 RUN pip install --upgrade pip && \
     pip install -r requirements.txt
+RUN python3 -m rpy2.situation
 COPY ./back /server
 CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
