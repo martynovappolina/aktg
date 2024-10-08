@@ -3,6 +3,7 @@ RUN mkdir /server
 WORKDIR /server
 COPY ./back/requirements.txt /server/requirements.txt
 RUN apt-get update && apt-get install -y r-base r-base-dev  
+RUN R -e "install.packages('caret', repos='http://cran.rstudio.com/')" 
 ENV R_HOME /usr/lib/R 
 RUN pip install --upgrade pip && \
     pip install -r requirements.txt
