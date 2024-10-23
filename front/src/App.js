@@ -6,8 +6,8 @@ import { aktgFields } from './data';
 function App() {
   return (
     <>
-      <Header />
-      <div className='container' style={{marginTop: '80px'}}>
+      {/* <Header /> */}
+      <div>
         <div className='title'>Калькулятор расчета вероятности АКТГ-эктопированного синдрома</div>
         <p>Калькулятор предназначен для определения вероятности АКТГ-эктопированного синдрома  у пациентов с АКТГ-зависимым эндогенным гиперкортицизмом.</p>
         <Calculator fields={aktgFields} url='predict/' />
