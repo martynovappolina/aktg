@@ -1,5 +1,4 @@
 body {
-  margin-top: 50px;
   font-family: "Open Sans", Helvetica, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,7 +14,7 @@ input::-webkit-inner-spin-button {
 }
 
 .container {
-  max-width: 850px;
+  /* max-width: 850px; */
   text-align: justify;
   margin: 0 auto;
 }
@@ -117,7 +116,7 @@ table {
 }
 
 .custom-label {
-  /* color: #44a1df; */
+  color: #44a1df;
 }
 
 .red {
